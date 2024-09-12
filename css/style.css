@@ -10,7 +10,8 @@ p {
 body {
   font-family: 'Poppins', sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  /*changed color to soft blue from pure white #ffffff*/
+  background-color: #f3faff;
 }
 
 .layout_margin {
@@ -381,7 +382,7 @@ a:focus {
   top: 26px;
   width: 30%;
   height: 5px;
-  background-color: #10e276;
+  background-color: #51b5ef;
 }
 
 .slider_section #carouselExampleIndicators {
@@ -531,7 +532,52 @@ a:focus {
 .about_section .img-box img {
   width: 100%;
 }
+#begin
+.about_section .form_container {
+  padding: 0 45px;
+}
 
+.about_section .form_container input,
+.about_section .form_container select {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #363535;
+  outline: none;
+}
+
+.about_section .form_container input.message_input {
+  margin-top: 45px;
+}
+
+.about_section .form_container input::-webkit-input-placeholder {
+  color: black;
+}
+
+.about_section .form_container input:-ms-input-placeholder {
+  color: black;
+}
+
+.about_section .form_container input::-ms-input-placeholder {
+  color:black;
+}
+
+.about_section .form_container input::placeholder {
+  color: black;
+}
+
+
+.about_section .form_container button {
+  background-color: transparent;
+  border: 2px solid #51b5ef;
+  color: #51b5ef;
+  text-transform: uppercase;
+  padding: 6px 40px;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+#end 
 .dish_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
