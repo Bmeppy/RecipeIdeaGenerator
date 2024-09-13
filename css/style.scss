@@ -329,18 +329,16 @@ a:focus {
   height: calc(100% - 80px);
   padding: 45px 0 90px 0;
 
+ // move heading to top
+  .top_heading {
+  text-align: center;
+  padding: 20px 0;
+}
 
-  .side_heading {
-    position: absolute;
-    top: 45%;
-    right: 25px;
-    transform: translateY(-50%);
-
-    h5 {
-      writing-mode: tb-rl;
-      text-orientation: upright;
-      @include second-font();
-      font-size: 20px;
+  .top_heading h5 {
+    font-size: 24px;
+    color: #272727;
+    letter-spacing: 2px;
     }
   }
 
