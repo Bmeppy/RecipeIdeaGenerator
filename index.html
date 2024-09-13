@@ -38,7 +38,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="" />
-            <span>
+            <span style="color: #272727">
               Recipe Idea Generator
             </span>
           </a>
@@ -131,12 +131,11 @@
           <div class=" col-md-5 offset-md-1">
             <div class="detail-box">
               <h1>
-                Recipe Ideas <br>
-                Generate Them Now!
+                Generate Recipes <br>
+                Now!
               </h1>
               <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration in some form, by injected humour, or randomised words
+                <strong>Not sure what to make for dinner tonight?</strong> Create an account with the button below and harness the power of AI to plan meals tailored to your calorie needs, dietary restrictions, and preferences. You'll never waste leftovers or spend hours meal planning again!
               </p>
 
               <div class="btn-box">
@@ -164,25 +163,43 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                How <br>
+                Try <br>
                 It <br>
-                Works
+                Out
               </h2>
               <hr>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in
-              some form, by injected humour, or randomised words
+              Don't have an account? No worries, try it out without signing in! Fill out the form to the right with ingredients you have, your preferred cuisine, dietary restrictions (like vegan or gluten-free), food allergies, desired difficulty level, time constraints, and calorie needs. After pressing the submit button, you will receive a recipe that meets all of your requirements.
             </p>
-            <a href="">
-              Read More
-            </a>
+          
           </div>
         </div>
-        <div class="col-md-6 px-0">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
+        <div class="col-md-5 px-0">
+          <!-- added this form in to replace picture-->
+          <div class="form_container">
+            <form action="/submit_form" method="post">
+              <input type="text" id="ingredients" name="ingredients" placeholder="Ingredients:"><br>
+              <input type="text" id="cuisine" name="cuisine" placeholder="Cuisine:"><br>
+              <input type="text" id="diet" name="diet" placeholder="Dietary Restrictions:"><br>
+              <input type="text" id="allergy" name="allergy" placeholder="Food Allergies:"><br>
+              <select id="difficulty" name="difficulty">
+                <label for="difficulty">difficulty level</label>
+                <option value="option1">Beginner</option>
+                <option value="option2">Intermediate</option>
+                <option value="option3">Advanced</option>
+              </select><br>
+              <select id="time" name="time">
+                <option value="option1">less than 30 minutes</option>
+                <option value="option2">30 minutes to an hour</option>
+                <option value="option3">greater than one hour</option>
+              </select><br>
+              <input type="text" id="min" name="min" placeholder="Calorie minimum:"><br>
+              <input type="text" id="max" name="max" placeholder="Calorie Maximum:"><br>
+              <button>
+                Submit
+              </button>
+          </form>
           </div>
         </div>
       </div>
@@ -217,18 +234,16 @@
             <div class="heading_container">
               <hr>
               <h2>
-                Smart <br>
-                Food <br>
-                Choices
+                Why <br>
+                AI <br>
+                Recipes
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in
-              some form, by injected humour, or randomised words
+              AI Recipe Generator was created to eliminate food waste, reduce the burden of meal planning, and help users become more confident in the kitchen. Anyone can generate recipes without signing up, but an account allows you to save and like recipes, and store them away for later, so you can come back time and time again.
             </p>
             <a href="">
-              Read More
+              Create Account
             </a>
           </div>
         </div>
@@ -249,7 +264,7 @@
         <hr>
       </div>
       <p>
-        There are many variations of passages of Lorem Ipsum available, but the majority
+        Any of the three buttons below will allow you to view recipes that have already been generated. Click to discover the most popular dishes, revisit your favorite recipes, or take a chance and generate a random recipe.
       </p>
     </div>
     <div class="carousel_container">
@@ -263,13 +278,13 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    A
+                    Popular
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    View most popular recipes based on user likes.
                   </p>
                   <a href="">
-                    Add to Favorites
+                    View
                   </a>
                 </div>
               </div>
@@ -281,13 +296,13 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    B
+                    Previous
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    Click on the button below to view recipes you've previously generated.
                   </p>
                   <a href="">
-                    Add to Favorites
+                    View
                   </a>
                 </div>
               </div>
@@ -299,13 +314,13 @@
                 </div>
                 <div class="detail-box">
                   <h4>
-                    C
+                    Random
                   </h4>
                   <p>
-                    There are many variations of passages of Lorem Ipsum available,
+                    Have no idea what to cook tonight? Generate a random recipe here.
                   </p>
                   <a href="">
-                    Add to Favorites
+                    View
                   </a>
                 </div>
               </div>
@@ -319,7 +334,7 @@
   <!-- end hot section -->
 
   <!-- app section -->
-
+  <!-- uncommented because we don't have app to link to
   <section class="app_section">
     <div class="container">
       <div class="row">
@@ -353,7 +368,7 @@
     </div>
   </section>
 
-  <!-- end app section -->
+   end app section -->
 
   <!-- client section -->
 
@@ -365,6 +380,21 @@
           Created by
         </h2>
       </div>
+      <!-- added this section in place of carousel-->
+      <div class="box ">
+        <div class="client_id">
+          <h4>
+          CAP3104 group 25
+          </h4>
+        </div>
+        <div class="detail-box">
+          <p>
+            Project for Human Computer Interaction at the University of Central Florida created by Rachel Basey, Devin Epstein, Tristan Nguyen, Jerry Wang, Terence Wilchcombe.
+          </p>
+        </div>
+        <!-- end of added section-->
+
+      <!-- this section is the carousel slide show, uncomment if group members want individual slides
       <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>
@@ -380,7 +410,24 @@
                   <img src="images/client.png" alt="" class="img-fluid">
                 </div>
                 <h4>
-                  CAP3104
+                  CAP3104 group 25
+                </h4>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Project for Human Computer Interaction at the University of Central Florida created by Rachel Basey, Devin Epstein, Tristan Nguyen, Jerry Wang, Terence Wilchcombe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box ">
+              <div class="client_id">
+                <div class="img-box">
+                  <img src="images/client.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  CAP3104 group 25
                 </h4>
               </div>
               <div class="detail-box">
@@ -399,7 +446,7 @@
                   <img src="images/client.png" alt="" class="img-fluid">
                 </div>
                 <h4>
-                  CAP3104
+                  CAP3104 group 25
                 </h4>
               </div>
               <div class="detail-box">
@@ -418,7 +465,7 @@
                   <img src="images/client.png" alt="" class="img-fluid">
                 </div>
                 <h4>
-                  CAP3104
+                  CAP3104 group 25
                 </h4>
               </div>
               <div class="detail-box">
@@ -429,29 +476,11 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box ">
-              <div class="client_id">
-                <div class="img-box">
-                  <img src="images/client.png" alt="" class="img-fluid">
-                </div>
-                <h4>
-                  CAP3104
-                </h4>
-              </div>
-              <div class="detail-box">
-                <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                  alteration in
-                  some form, by injected humour, or randomised words which .
-                </p>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
-
+    -->
     </div>
   </section>
   <!-- end client section -->
@@ -541,7 +570,7 @@
   <section class="container-fluid footer_section">
     <div class="social_container">
       <h4>
-        Follow on
+        Share on
       </h4>
       <div class="social-box">
         <a href="">
